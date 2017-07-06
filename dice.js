@@ -1,12 +1,12 @@
-module.exports = (numberOfDice, sides) => {
+module.exports = (numberOfDice, numberOfSides) => {
   numberOfDice = Number(numberOfDice);
-  sides = Number(sides);
+  sides = Number(numberOfSides);
   var total = 0;
   function dice(sides) {
     return Math.floor(Math.random() * sides + 1);
   }
   for (var i = 0; i < numberOfDice; i++) {
-    total += dice(sides);
+    total += dice(numberOfSides);
   }
   return total;
 }
